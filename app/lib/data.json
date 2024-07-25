@@ -1,0 +1,20 @@
+[
+    {
+        "key":1,
+        "name": "Stock Management Application",
+        "description": "A stock management application that uses the FIFO (First In, First Out) method to manage inventory. The application helps businesses keep track of stock levels, manage orders, and ensure efficient inventory turnover.",
+        "build_process": "The application is built using ASP.NET Core for the backend and React for the frontend. It uses Entity Framework for database interactions and implements a RESTful API to handle inventory operations.",
+        "image": "/public/water.jpg",
+        "tech":[
+            "Next Js","Mongo DB","Figma","Visual Studio Code"
+        ]
+    },
+    {
+        "key":2,
+        "name": "Invoice Mobile Application",
+        "description": "A mobile application designed for creating and managing invoices. The application allows users to create invoices on the go, manage clients, and track payment statuses.",
+        "build_process": "The application is developed using Flutter for a cross-platform mobile experience. Firebase is used for authentication and real-time database management. The app integrates with various payment gateways to facilitate online payments.",
+        "image": "/public/water.jpg",
+        "tech":["React Native","Firebase","Behance"]
+    }
+]
