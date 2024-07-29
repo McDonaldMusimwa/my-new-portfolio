@@ -1,0 +1,38 @@
+[
+    {
+        "image": "/public/html.png",
+        "skill": "HTML"
+    },
+    {
+        "image": "/public/python.svg",
+        "skill": "Python"
+    },
+    {
+        "image": "/public/javascript.svg",
+        "skill": "Java Script"
+    },
+    {
+        "image": "/public/typescript.svg",
+        "skill": "Type Script"
+    },
+    {
+        "image": "/public/dotneticon.svg",
+        "skill": "Dot Net"
+    },
+    {
+        "image": "/public/mongo.svg",
+        "skill": "Mongo Db"
+    },
+    {
+        "image": "/public/sql.svg",
+        "skill": "SQL"
+    },
+    {
+        "image": "/public/react.svg",
+        "skill": "React"
+    },
+    {
+        "image": "/public/nextjs.svg",
+        "skill": "Next Js"
+    }
+]

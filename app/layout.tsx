@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Abel } from "next/font/google";
 import "./globals.css";
 import TopNav from "./ul/navbar/topnav";
 import Footer from "./ul/footer/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const abel = Abel({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: "McDonald`s Portfolio",
@@ -18,10 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={abel.className}>
         <TopNav />
         {children}</body>
-        <Footer />
+      <Footer />
     </html>
   );
 }

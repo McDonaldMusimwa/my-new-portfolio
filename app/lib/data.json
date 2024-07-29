@@ -2,7 +2,7 @@
     {
         "key":1,
         "name": "Stock Management Application",
-        "description": "A stock management application that uses the FIFO (First In, First Out) method to manage inventory. The application helps businesses keep track of stock levels, manage orders, and ensure efficient inventory turnover.",
+        "description": "After learning the fundamentals and having developer medium sized websites ,i was on the hunt for some thing more complex.Something that explored development from design to deployment.Having worked in accounting i had to deal with stock costing,closing stock reconciliation and stock out, an idea sparked my interest to develop stock management application that will stream line the management of stock.The result of that was an experimental stock management application that uses the FIFO (First In, First Out) method to manage inventory. The application helps businesses keep track of stock levels, manage orders, and ensure efficient inventory turnover.",
         "build_process": "The application is built using ASP.NET Core for the backend and React for the frontend. It uses Entity Framework for database interactions and implements a RESTful API to handle inventory operations.",
         "image": "/public/water.jpg",
         "tech":[

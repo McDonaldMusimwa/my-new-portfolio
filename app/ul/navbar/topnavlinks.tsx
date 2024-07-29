@@ -1,6 +1,7 @@
 
 import Link from "next/link"
 
+
 export default function NavLinks() {
     const links = [
         {
@@ -25,9 +26,11 @@ export default function NavLinks() {
         }
     ]
     return (
-        <ul className="justify-between flex-row h-6 justify-between">
+        <ul className="justify-between flex-row h-6 ">
+         
+
             {links.map(link => {
-                return (<li className="p-1 inline m-1 hover:bg-sky-700" key={link.key}><Link href={link.path} >{link.name}</Link></li>)
+                return (<li className="p-1 inline m-1 hover:bg-sky-700 justify-between" key={link.key}><Link href={link.path} >{link.name}</Link></li>)
             })}
 
            

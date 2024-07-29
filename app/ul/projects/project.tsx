@@ -1,47 +1,51 @@
-import Image from "next/image"
+import Image from "next/image";
+
 export default function ProjectItem({ project }) {
     return (
-
-        <div className="flex-col m-2 rounded-sm bg-white p-5" key={project.key}>
-            <h2><strong>{project.name}</strong></h2>
-            <hr />
-            <br></br>
-            <p>{project.description}</p>
-            <br></br>
-            <h3><strong>Build Process</strong></h3>
-            <hr />
-            <br></br>
-            <p>
-                {project.build_process}
-            </p>
-            <br></br>
-            <div className="flex justify-between">
-                <div>
-                    <h4 className="block"><strong>Tech Stack</strong></h4>
-
-                    <hr />
-
-                    <ul className="">
-                        {project.tech.map(item => {
-                            return (<li key={item[0]}>{item}</li>)
-                        })}
+        <div className="flex flex-col m-1 rounded-lg bg-white p-4 shadow-md w-full">
+            <h2 className="text-center text-1xl font-bold mb-4">{project.name}</h2>
+            <hr className="my-2" />
+            <p className="mb-4">{project.description}</p>
+            
+            <h3 className="text-center text-1xl font-semibold mb-2">Build Process</h3>
+            <hr className="my-2" />
+            <p className="mb-4">{project.build_process}</p>
+            
+            <h4 className="text-center text-1lg font-medium mb-2">Challenges</h4>
+            <hr className="my-2" />
+            <p className="mb-4">{project.challenges}</p>
+            
+            <div className="flex justify-between gap-4 mb-4">
+                <div className="flex-1">
+                    <h4 className="text-1lg font-medium mb-2">Tech Stack</h4>
+                    <hr className="my-2" />
+                    <ul className="list-disc pl-5">
+                        {project.tech.map((item, index) => (
+                            <li key={index} className="mb-1">{item}</li>
+                        ))}
                     </ul>
                 </div>
-                <div>
-                    <h4 className="block"><strong>Links</strong></h4>
-
-                    <hr />
-
-                    <ul className="flex-ro">
-                        <li><a href={project.live}>Live</a></li>
-                        <li><a href={project.sourcecode}>Source Code</a></li>
+                <div className="flex-1">
+                    <h4 className="text-1lg font-medium mb-2">Links</h4>
+                    <hr className="my-2" />
+                    <ul className="list-none">
+                        <li className="mb-1">
+                            <a href={project.live} className="text-blue-500 hover:underline">Live</a>
+                        </li>
+                        <li className="mb-1">
+                            <a href={project.sourcecode} className="text-blue-500 hover:underline">Source Code</a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <br></br>
-            <Image src={project.image} width={1000}
-                height={760} alt={project.name} className="shadow-sm rounded-sm" />
-<br />
+            
+            <Image 
+                src={project.image} 
+                width={1000} 
+                height={760} 
+                alt={project.name} 
+                className="shadow-lg rounded-lg"
+            />
         </div>
-    )
+    );
 }
