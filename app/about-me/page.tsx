@@ -19,7 +19,7 @@ export default function AboutMe() {
 
         <div className="flex flex-col m-1 rounded-lg bg-white p-4 shadow-md w-full">
             <h1 className="text-center"><strong>About Me</strong></h1>
-            <hr/>
+            <hr />
             <p className="p-1 text-left">
                 Hi there, <strong>McDonald</strong> here. My journey into software programming has been both interesting and traditional. If someone had told me four years ago that I’d be tinkering with computers, I would have laughed it off.
 
@@ -30,8 +30,8 @@ export default function AboutMe() {
                 I have immense respect for the friends and colleagues who have shaped me into the diverse programmer I am today.
             </p>
             <h1 className="text-center"><strong>Skills</strong></h1>
-            <hr/>
-            <span className='flex justify-center'>
+            <hr />
+            <div className="flex flex-nowrap justify-center" id='skills'>
                 <Image src={htmlicon} width={40} height={40} alt='html icon' className='m-2' />
                 <Image src={cssicon} width={40} height={40} alt='css icon' className='m-2' />
                 <Image src={javascript} width={40} height={40} alt='javascript icon' className='m-2' />
@@ -40,13 +40,13 @@ export default function AboutMe() {
                 <Image src={csharp} width={40} height={40} alt='csharp icon' className='m-2' />
                 <Image src={sql} width={40} height={40} alt='sql icon' className='m-2' />
                 <Image src={dotnet} width={40} height={40} alt='dotnet icon' className='m-2' />
-
                 <Image src={react} width={40} height={40} alt='react icon' className='m-2' />
                 <Image src={nextjs} width={40} height={40} alt='nextjs icon' className='m-2' />
                 <Image src={tailwindcss} width={40} height={40} alt='tailwindcss icon' className='m-2' />
                 <Image src={git} width={40} height={40} alt='git icon' className='m-2' />
                 <Image src={mongodb} width={40} height={40} alt='mongodb icon' className='m-2' />
-            </span>
+            </div>
+
         </div>
 
 
@@ -54,7 +54,7 @@ export default function AboutMe() {
         <div className="w-full p-4  bg-white rounded-lg">
             <h3 className="text-center">
                 <strong>Community</strong>
-                <hr/>
+                <hr />
             </h3>
             <p className="p-1">
                 Since beginning my journey in software development, I have spent a lot of time learning solo and collaborating with other students in the USA. After the lockdown, I discovered developer meetups around Cape Town. I've taken an interest in different communities and building social coding networks. For example, during my learning of <strong>C# </strong>and <strong>.NET</strong>, I joined the <strong>CPTMSDUG </strong>group, where we share new features and advancements in C# and other microsoft products. I am also a big fan of <strong>React </strong>and i foresee a time where I contribute to the local React group.

@@ -1,74 +1,41 @@
-export default function ContactMe(){
-    return(<>
-    
-    
-    <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+'use client';
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+import Linkedin from "@/public/Link.png";
+import Youtube from "@/public/youtube.webp";
+import Git from "@/public/github.png";
+import Image from "next/image";
+import styles from "./Contact.module.css";
+import arrow from "@/public/arrow.png";
+import Link from "next/link";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import ContactForm from "../ul/contact/contact";
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div></>)
+
+export default function ContactMe() {
+
+
+  return (
+    <div className="p-6 rounded-lg text-sm shadow-lg w-full md:w-3/4 mx-auto">
+      <ul className="m-10 p-4 flex sm:flex-row sm:space-x-4 lg:grid lg:grid-cols-3 text-center lg:mb-0 lg:w-full lg:max-w-5xl">
+        <li className={`inline px-5 py-4 ${styles.socials}`}>
+          <Link href="https://www.linkedin.com/in/mcdonaldmusimwa" target="_blank" rel="noopener noreferrer">
+            <Image src={Linkedin} width={40} height={40} alt="Linkedin" />
+          </Link>
+        </li>
+        <li className={`inline px-5 py-4 ${styles.socials}`}>
+          <Link href="https://github.com/McDonaldMusimwa" target="_blank" rel="noopener noreferrer">
+            <Image src={Git} width={40} height={40} alt="GitHub" />
+          </Link>
+        </li>
+        <li className={`inline px-5 py-4 ${styles.socials}`}>
+          <Link href="https://www.youtube.com/channel/UCjiAsiaKGKNKSck8i3iPZig" target="_blank" rel="noopener noreferrer">
+            <Image src={Youtube} width={40} height={40} alt="YouTube" />
+          </Link>
+        </li>
+      </ul>
+      <ContactForm />
+    </div>
+  );
 }

@@ -9,6 +9,62 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+html{
+  @apply scroll-smooth; 
+}
+/* In your styles.css or equivalent */
+.bg-custom-button {
+  background-color: rgba(253, 248, 239, 0.208);
+  color: black;
+  padding: 1rem;
+}
+
+button {
+  animation: wiggle 2s linear infinite;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: white;
+  text-overflow: inherit;
+}
+.stroke-text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -32,4 +88,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@media only screen and (max-width: 600px){
+  #skills{
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+  }
+
 }

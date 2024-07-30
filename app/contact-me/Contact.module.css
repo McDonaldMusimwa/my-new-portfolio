@@ -23,7 +23,7 @@
   .form {
     background: linear-gradient(to right, rgb(164, 106, 247), rgb(243, 153, 36));
     padding: 30px;
-    width: 400px; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
   }
   
   .form h2 {
@@ -57,17 +57,18 @@
     width: 10px;
   }
   
-  .Socials {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .socials {
+    display: inline;
+    animation: pulse 10.1s infinite ease-in-out alternate;
   }
-  .Socials a {
-    text-decoration: none;
-    color: black;
-    border-bottom: 1px black solid;
+  
+  @keyframes pulse {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
   }
+  
   
   /* Mobile Styles */
   @media only screen and (max-width: 600px) {
@@ -78,13 +79,7 @@
       padding: 20px;
      
     }
-    h2,
-    h3 {
-      overflow: hidden;
-      font-size: 15px;
-      margin: 1px 0;
-    }
-  
+
     .form input,
   .form textarea {
     display: inline;
